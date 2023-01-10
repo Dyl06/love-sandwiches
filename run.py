@@ -86,7 +86,7 @@ def calculate_surplus_data(sales_row):
     
     return surplus_data
 
-"""
+
 def get_last_5_entries_sales():
     """
     Collects collumns of data from sales worksheet, collecting
@@ -116,7 +116,7 @@ def calculate_stock_data(data):
         new_stock_data.append(round(stock_num))
     
     return new_stock_data 
-"""
+
 
 def main():
     """
@@ -127,9 +127,9 @@ def main():
     update_worksheet(sales_data, "sales")
     new_surplus_data = calculate_surplus_data(sales_data)
     update_worksheet(new_surplus_data, "surplus")
-   # sales_columns = get_last_5_entries_sales()
-   # stock_data = calculate_stock_data(sales_columns)
-   # update_worksheet(stock_data, "stock")
+    sales_columns = get_last_5_entries_sales()
+    stock_data = calculate_stock_data(sales_columns)
+    update_worksheet(stock_data, "stock")
 
 
 print("welcome to love sandwiches")
